@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Gangadhar Jannu's Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Gangadhar Jannu`,
+      summary: `who works in The Netherlands building blockchain applications.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `Gangadhar Jannu's blog built using Gatsby starter blog.`,
+    siteUrl: `https://gangadharjannu.github.io/`,
+    // social: {
+    //   twitter: `gangadharjannu`,
+    // },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -99,7 +99,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Gangadhar Jannu's Blog RSS Feed",
           },
         ],
       },
@@ -107,7 +107,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Gangadhar Jannu's Blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
