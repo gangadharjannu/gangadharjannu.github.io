@@ -3,13 +3,13 @@ module.exports = {
     title: `Gangadhar Jannu's Blog`,
     author: {
       name: `Gangadhar Jannu`,
-      summary: `who works in The Netherlands building blockchain applications.`,
+      summary: `who works in Europe building blockchain and web applications.`,
     },
-    description: `Gangadhar Jannu's blog built using Gatsby starter blog.`,
+    description: `Gangadhar Jannu's blog.`,
     siteUrl: `https://gangadharjannu.github.io/`,
-    // social: {
-    //   twitter: `gangadharjannu`,
-    // },
+    social: {
+      twitter: `gangadharjannu`,
+    },
   },
   plugins: [
     `gatsby-plugin-image`,

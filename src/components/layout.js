@@ -27,8 +27,9 @@ const Layout = ({ location, title, children }) => {
       <footer>
         {/* © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a> */}
-        🧡 from Andhra Pradesh
+        <a href="https://www.gatsbyjs.com">Gatsby</a>.
+        {` `} */}
+        Made with 🧡 from Andhra Pradesh, Bhaarath
       </footer>
     </div>
   )
