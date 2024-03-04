@@ -1,7 +1,7 @@
 ---
 title: "Uint8array to String and String to Uint8array in Browser and NodeJS"
 date: 2023-10-26T01:22:45+02:00
-draft: true
+description: "Convert Uint8array to String and String to Uint8array in Browser and NodeJS"
 ---
 
 Recently I worked on an Ethereum project where I had to store secret which is in `Uint8Array`. To store the secret I had to convert that into string and convert it back to `Uint8Array`.
@@ -14,8 +14,8 @@ Once it is converted into string, we can store that information in either server
 
 ```javascript
 // Considering `secret` of type Uint8Array
-const str = btoa(secret);
-// Now we can share the `str` with server using API call 
+const str = btoa(secret)
+// Now we can share the `str` with server using API call
 // or store it in our local (only for development)
 ```
 
