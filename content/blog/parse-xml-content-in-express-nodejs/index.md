@@ -4,27 +4,29 @@ date: 2024-03-03T23:47:21.300Z
 description: "Parse XML content in NodeJS using Express and body-parser middleware"
 ---
 
-Recently I am working on a pet project where I will receive a XML feed information to my NodeJS and Express server and it took me a while to figure out how to parse XML.
+Recently, I've been working on a pet project involving an XML feed that I need to handle with my NodeJS and Express server. It took me some time to figure out how to parse the XML data. I found that there wasn’t a lot of information available on parsing XML content, which might suggest that it’s not a widely used technique.
 
-There wasn't much information available related to parsing XML content, may be not much people are using ?
+Recently I worked on a pet project where I receive an XML feed that I need to handle with my NodeJS and Express server. It took me a while to figure out how to parse the XML data.
 
 ## Parsing XML content using Express
 
-Express uses body-parser middleware to parse incoming request bodies and make it available to route handlers.
+Express relies on the body-parser middleware to handle and parse incoming request bodies, making the data accessible to route handlers.
 
-So we mostly use JSON and urlencoded middlewares to parse content from requests however, if you want to read other data types using Express, we need to use the existing Raw body parser or Text body parser [^1].
+While I typically use JSON and urlencoded middlewares for parsing request content, handling other data types in Express requires using the Raw body parser or the Text body parser [^1].
 
-Raw body parser outputs Binary/buffer data while Text body parser emits plain text.
+The Raw body parser produces binary or buffer data, whereas the Text body parser outputs plain text.
 
-I have used Text body parser since I need the original incoming XML.
+In my case, I opted for the Text body parser because I need to retain the original XML data from incoming requests.
 
 ### Implementation
 
-I initially tried using `app.use(express.text())` which resulted in an empty object. To fix that I had to specify `type` option in `express.text` function like below
+Initially, I attempted to use `app.use(express.text())`, but it resulted in an empty object. To resolve this, I needed to specify the `type` option in the `express.text` function as follows:
 
-`app.use(express.text({ type: "*/*" }))`
+```javascript
+app.use(express.text({ type: "*/*" }))
+```
 
-This successfully parsed XML content and added it on `req.body` property.
+This configuration successfully parsed the XML content and populated the `req.body` property with it.
 
 ### Full implementation
 
